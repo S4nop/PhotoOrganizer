@@ -27,15 +27,20 @@ namespace PhotoOrg
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             dialog.ShowDialog();
             path = dialog.SelectedPath;
-            if (path != "") getFileList();
+            if (path != "") {
+                getFileList(false);
+                unlockAll();
+                MessageBox.Show(lstList.Items.Count + "개의 사진(동영상)을 불러왔습니다");
+            }
         }
 
         private void init()
         {
             lstList.Items.Clear();
         }
-        private void getFileList()
+        private void getFileList(bool pickMod)
         {
+            if (path == null) return;
             System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(path);
             init();
             foreach (System.IO.FileInfo File in di.GetFiles())
@@ -49,10 +54,18 @@ namespace PhotoOrg
                     || File.Extension.ToLower().CompareTo(".jpeg") == 0)
                 {
                     String FileNameOnly = File.Name;
+                    if (pickMod)
+                    {
+                        fileInf fInf = getFileInf(path + "\\" + FileNameOnly);
+                        string[] fData = dtMan.Value.ToString().Split(" ".ToCharArray())[0].Split("-".ToCharArray());
+
+                        if (!(fInf.getYear().Equals(fData[0]) && fInf.getMonth().Equals(fData[1]) && fInf.getDate().Equals(fData[2]))) continue;
+                    }
 
                     lstList.Items.Add(FileNameOnly);
                 }
             }
+            
         }
 
         private void showPicture(string filepath)
@@ -145,6 +158,8 @@ namespace PhotoOrg
             btnDay.Enabled = false;
             btnSelFolder.Enabled = false;
             lstList.Enabled = false;
+            dtMan.Enabled = false;
+            btnMan.Enabled = false;
         }
         private void unlockAll()
         {
@@ -153,6 +168,33 @@ namespace PhotoOrg
             btnDay.Enabled = true;
             btnSelFolder.Enabled = true;
             lstList.Enabled = true;
+            dtMan.Enabled = true;
+            btnMan.Enabled = true;
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            getFileList(true);
+        }
+
+        private void BtnMan_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.ShowDialog();
+            string svPath = dialog.SelectedPath;
+            if (svPath != "")
+            {
+                svPhotos(svPath);
+            }
+        }
+
+        private void svPhotos(string dest)
+        {
+            foreach(string fName in lstList.Items)
+            {
+                File.Move(path + "\\" + fName, dest + "\\" + fName);
+            }
+            getFileList(false);
         }
     }
 
