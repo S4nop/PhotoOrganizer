@@ -30,13 +30,10 @@
         {
             this.lstList = new System.Windows.Forms.ListBox();
             this.btnSelFolder = new System.Windows.Forms.Button();
-            this.btnAuto = new System.Windows.Forms.Button();
-            this.btnMan = new System.Windows.Forms.Button();
             this.panAuto = new System.Windows.Forms.Panel();
-            this.btnMonth = new System.Windows.Forms.Button();
-            this.btnWeek = new System.Windows.Forms.Button();
-            this.btnDay = new System.Windows.Forms.Button();
             this.btnYear = new System.Windows.Forms.Button();
+            this.btnDay = new System.Windows.Forms.Button();
+            this.btnMonth = new System.Windows.Forms.Button();
             this.panAuto.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,13 +43,13 @@
             this.lstList.ItemHeight = 12;
             this.lstList.Location = new System.Drawing.Point(12, 12);
             this.lstList.Name = "lstList";
-            this.lstList.Size = new System.Drawing.Size(262, 364);
+            this.lstList.Size = new System.Drawing.Size(262, 400);
             this.lstList.TabIndex = 0;
             this.lstList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstList_MouseDoubleClick);
             // 
             // btnSelFolder
             // 
-            this.btnSelFolder.Location = new System.Drawing.Point(12, 382);
+            this.btnSelFolder.Location = new System.Drawing.Point(12, 417);
             this.btnSelFolder.Name = "btnSelFolder";
             this.btnSelFolder.Size = new System.Drawing.Size(262, 34);
             this.btnSelFolder.TabIndex = 2;
@@ -60,62 +57,15 @@
             this.btnSelFolder.UseVisualStyleBackColor = true;
             this.btnSelFolder.Click += new System.EventHandler(this.BtnSelFolder_Click);
             // 
-            // btnAuto
-            // 
-            this.btnAuto.Location = new System.Drawing.Point(12, 422);
-            this.btnAuto.Name = "btnAuto";
-            this.btnAuto.Size = new System.Drawing.Size(127, 33);
-            this.btnAuto.TabIndex = 3;
-            this.btnAuto.Text = "자동 분류";
-            this.btnAuto.UseVisualStyleBackColor = true;
-            this.btnAuto.Click += new System.EventHandler(this.BtnAuto_Click);
-            // 
-            // btnMan
-            // 
-            this.btnMan.Location = new System.Drawing.Point(147, 422);
-            this.btnMan.Name = "btnMan";
-            this.btnMan.Size = new System.Drawing.Size(127, 33);
-            this.btnMan.TabIndex = 4;
-            this.btnMan.Text = "수동 분류";
-            this.btnMan.UseVisualStyleBackColor = true;
-            // 
             // panAuto
             // 
             this.panAuto.Controls.Add(this.btnYear);
             this.panAuto.Controls.Add(this.btnDay);
-            this.panAuto.Controls.Add(this.btnWeek);
             this.panAuto.Controls.Add(this.btnMonth);
             this.panAuto.Location = new System.Drawing.Point(280, 12);
             this.panAuto.Name = "panAuto";
             this.panAuto.Size = new System.Drawing.Size(269, 442);
             this.panAuto.TabIndex = 5;
-            // 
-            // btnMonth
-            // 
-            this.btnMonth.Location = new System.Drawing.Point(1, 46);
-            this.btnMonth.Name = "btnMonth";
-            this.btnMonth.Size = new System.Drawing.Size(268, 40);
-            this.btnMonth.TabIndex = 0;
-            this.btnMonth.Text = "1개월 단위로 분류";
-            this.btnMonth.UseVisualStyleBackColor = true;
-            // 
-            // btnWeek
-            // 
-            this.btnWeek.Location = new System.Drawing.Point(1, 92);
-            this.btnWeek.Name = "btnWeek";
-            this.btnWeek.Size = new System.Drawing.Size(268, 40);
-            this.btnWeek.TabIndex = 1;
-            this.btnWeek.Text = "1주일 단위로 분류";
-            this.btnWeek.UseVisualStyleBackColor = true;
-            // 
-            // btnDay
-            // 
-            this.btnDay.Location = new System.Drawing.Point(1, 138);
-            this.btnDay.Name = "btnDay";
-            this.btnDay.Size = new System.Drawing.Size(268, 40);
-            this.btnDay.TabIndex = 2;
-            this.btnDay.Text = "1일 단위로 분류";
-            this.btnDay.UseVisualStyleBackColor = true;
             // 
             // btnYear
             // 
@@ -127,14 +77,32 @@
             this.btnYear.UseVisualStyleBackColor = true;
             this.btnYear.Click += new System.EventHandler(this.BtnYear_Click);
             // 
+            // btnDay
+            // 
+            this.btnDay.Location = new System.Drawing.Point(1, 92);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(268, 40);
+            this.btnDay.TabIndex = 2;
+            this.btnDay.Text = "1일 단위로 분류";
+            this.btnDay.UseVisualStyleBackColor = true;
+            this.btnDay.Click += new System.EventHandler(this.BtnDay_Click);
+            // 
+            // btnMonth
+            // 
+            this.btnMonth.Location = new System.Drawing.Point(1, 46);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(268, 40);
+            this.btnMonth.TabIndex = 0;
+            this.btnMonth.Text = "1개월 단위로 분류";
+            this.btnMonth.UseVisualStyleBackColor = true;
+            this.btnMonth.Click += new System.EventHandler(this.BtnMonth_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 463);
             this.Controls.Add(this.panAuto);
-            this.Controls.Add(this.btnMan);
-            this.Controls.Add(this.btnAuto);
             this.Controls.Add(this.btnSelFolder);
             this.Controls.Add(this.lstList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -150,12 +118,9 @@
 
         private System.Windows.Forms.ListBox lstList;
         private System.Windows.Forms.Button btnSelFolder;
-        private System.Windows.Forms.Button btnAuto;
-        private System.Windows.Forms.Button btnMan;
         private System.Windows.Forms.Panel panAuto;
         private System.Windows.Forms.Button btnYear;
         private System.Windows.Forms.Button btnDay;
-        private System.Windows.Forms.Button btnWeek;
         private System.Windows.Forms.Button btnMonth;
     }
 }

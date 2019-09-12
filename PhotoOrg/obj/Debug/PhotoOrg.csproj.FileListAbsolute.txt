@@ -2,10 +2,11 @@ C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.ex
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.exe
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.pdb
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.csprojAssemblyReference.cache
-C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmMain.resources
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.Properties.Resources.resources
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.csproj.GenerateResource.cache
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.csproj.CoreCompileInputs.cache
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.exe
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.pdb
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmPrev.resources
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmMain.resources
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmProg.resources
