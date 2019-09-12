@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace PhotoOrg
 {
     public partial class frmMain : Form
     {
         string path;
+        frmPrev prv = null;
         public frmMain()
         {
             InitializeComponent();
@@ -29,7 +32,6 @@ namespace PhotoOrg
         private void init()
         {
             lstList.Items.Clear();
-            imgPrev.Image = null;
         }
         private void getFileList()
         {
@@ -50,25 +52,54 @@ namespace PhotoOrg
 
         private void showPicture(string filepath)
         {
-            try
+            if (prv == null)
             {
-                imgPrev.Load(@filepath);
-                imgPrev.SizeMode = PictureBoxSizeMode.StretchImage;
-            }catch(Exception e)
-            {
-                MessageBox.Show("사진을 불러오는 중 오류가 발생했습니다");
+                prv = new frmPrev();
+                prv.Show();
             }
+            prv.showPhoto(@filepath);
         }
 
-        private void LstList_MouseClick(object sender, MouseEventArgs e)
+        private void BtnOrg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LstList_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int idx = -1;
             Point point = e.Location;
             idx = lstList.IndexFromPoint(point);
 
-            if(idx != -1)
+            if (idx != -1)
                 showPicture(path + "\\" + lstList.Items[idx].ToString());
+
         }
 
+        private void setSize()
+        {
+            while (Width > 300) --Width;
+            while (Width < 571) ++Width;
+        }
+
+        private void BtnAuto_Click(object sender, EventArgs e)
+        {
+            setSize();
+        }
+
+        private void BtnYear_Click(object sender, EventArgs e)
+        {
+            foreach (string file in lstList.Items)
+            {
+
+            }
+        }
+
+        private void mov2Folder(string targ, string loc)
+        {
+            if (Directory.Exists(loc) == false) Directory.CreateDirectory(loc);
+
+            File.Move(@targ, @loc);
+        }
     }
 }

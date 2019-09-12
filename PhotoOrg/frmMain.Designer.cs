@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             this.lstList = new System.Windows.Forms.ListBox();
-            this.imgPrev = new System.Windows.Forms.PictureBox();
             this.btnSelFolder = new System.Windows.Forms.Button();
-            this.btnOrg = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPrev)).BeginInit();
+            this.btnAuto = new System.Windows.Forms.Button();
+            this.btnMan = new System.Windows.Forms.Button();
+            this.panAuto = new System.Windows.Forms.Panel();
+            this.btnMonth = new System.Windows.Forms.Button();
+            this.btnWeek = new System.Windows.Forms.Button();
+            this.btnDay = new System.Windows.Forms.Button();
+            this.btnYear = new System.Windows.Forms.Button();
+            this.panAuto.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstList
@@ -42,60 +46,102 @@
             this.lstList.ItemHeight = 12;
             this.lstList.Location = new System.Drawing.Point(12, 12);
             this.lstList.Name = "lstList";
-            this.lstList.Size = new System.Drawing.Size(329, 376);
+            this.lstList.Size = new System.Drawing.Size(262, 364);
             this.lstList.TabIndex = 0;
-            this.lstList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LstList_MouseClick);
-            // 
-            // imgPrev
-            // 
-            this.imgPrev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgPrev.Location = new System.Drawing.Point(347, 12);
-            this.imgPrev.Name = "imgPrev";
-            this.imgPrev.Size = new System.Drawing.Size(262, 232);
-            this.imgPrev.TabIndex = 1;
-            this.imgPrev.TabStop = false;
+            this.lstList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LstList_MouseDoubleClick);
             // 
             // btnSelFolder
             // 
-            this.btnSelFolder.Location = new System.Drawing.Point(347, 250);
+            this.btnSelFolder.Location = new System.Drawing.Point(12, 382);
             this.btnSelFolder.Name = "btnSelFolder";
-            this.btnSelFolder.Size = new System.Drawing.Size(262, 44);
+            this.btnSelFolder.Size = new System.Drawing.Size(262, 34);
             this.btnSelFolder.TabIndex = 2;
             this.btnSelFolder.Text = "폴더 선택";
             this.btnSelFolder.UseVisualStyleBackColor = true;
             this.btnSelFolder.Click += new System.EventHandler(this.BtnSelFolder_Click);
             // 
-            // btnOrg
+            // btnAuto
             // 
-            this.btnOrg.Location = new System.Drawing.Point(347, 299);
-            this.btnOrg.Name = "btnOrg";
-            this.btnOrg.Size = new System.Drawing.Size(262, 43);
-            this.btnOrg.TabIndex = 3;
-            this.btnOrg.Text = "사진 정리";
-            this.btnOrg.UseVisualStyleBackColor = true;
+            this.btnAuto.Location = new System.Drawing.Point(12, 422);
+            this.btnAuto.Name = "btnAuto";
+            this.btnAuto.Size = new System.Drawing.Size(127, 33);
+            this.btnAuto.TabIndex = 3;
+            this.btnAuto.Text = "자동 분류";
+            this.btnAuto.UseVisualStyleBackColor = true;
+            this.btnAuto.Click += new System.EventHandler(this.BtnAuto_Click);
             // 
-            // btnExit
+            // btnMan
             // 
-            this.btnExit.Location = new System.Drawing.Point(347, 346);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(262, 43);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "종료";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnMan.Location = new System.Drawing.Point(147, 422);
+            this.btnMan.Name = "btnMan";
+            this.btnMan.Size = new System.Drawing.Size(127, 33);
+            this.btnMan.TabIndex = 4;
+            this.btnMan.Text = "수동 분류";
+            this.btnMan.UseVisualStyleBackColor = true;
+            // 
+            // panAuto
+            // 
+            this.panAuto.Controls.Add(this.btnYear);
+            this.panAuto.Controls.Add(this.btnDay);
+            this.panAuto.Controls.Add(this.btnWeek);
+            this.panAuto.Controls.Add(this.btnMonth);
+            this.panAuto.Location = new System.Drawing.Point(280, 12);
+            this.panAuto.Name = "panAuto";
+            this.panAuto.Size = new System.Drawing.Size(269, 442);
+            this.panAuto.TabIndex = 5;
+            // 
+            // btnMonth
+            // 
+            this.btnMonth.Location = new System.Drawing.Point(1, 46);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(268, 40);
+            this.btnMonth.TabIndex = 0;
+            this.btnMonth.Text = "1개월 단위로 분류";
+            this.btnMonth.UseVisualStyleBackColor = true;
+            // 
+            // btnWeek
+            // 
+            this.btnWeek.Location = new System.Drawing.Point(1, 92);
+            this.btnWeek.Name = "btnWeek";
+            this.btnWeek.Size = new System.Drawing.Size(268, 40);
+            this.btnWeek.TabIndex = 1;
+            this.btnWeek.Text = "1주일 단위로 분류";
+            this.btnWeek.UseVisualStyleBackColor = true;
+            // 
+            // btnDay
+            // 
+            this.btnDay.Location = new System.Drawing.Point(1, 138);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(268, 40);
+            this.btnDay.TabIndex = 2;
+            this.btnDay.Text = "1일 단위로 분류";
+            this.btnDay.UseVisualStyleBackColor = true;
+            // 
+            // btnYear
+            // 
+            this.btnYear.Location = new System.Drawing.Point(1, 0);
+            this.btnYear.Name = "btnYear";
+            this.btnYear.Size = new System.Drawing.Size(268, 40);
+            this.btnYear.TabIndex = 3;
+            this.btnYear.Text = "1년 단위로 분류";
+            this.btnYear.UseVisualStyleBackColor = true;
+            this.btnYear.Click += new System.EventHandler(this.BtnYear_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(621, 398);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnOrg);
+            this.ClientSize = new System.Drawing.Size(555, 463);
+            this.Controls.Add(this.panAuto);
+            this.Controls.Add(this.btnMan);
+            this.Controls.Add(this.btnAuto);
             this.Controls.Add(this.btnSelFolder);
-            this.Controls.Add(this.imgPrev);
             this.Controls.Add(this.lstList);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Photo Organizer";
-            ((System.ComponentModel.ISupportInitialize)(this.imgPrev)).EndInit();
+            this.panAuto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -103,10 +149,14 @@
         #endregion
 
         private System.Windows.Forms.ListBox lstList;
-        private System.Windows.Forms.PictureBox imgPrev;
         private System.Windows.Forms.Button btnSelFolder;
-        private System.Windows.Forms.Button btnOrg;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnAuto;
+        private System.Windows.Forms.Button btnMan;
+        private System.Windows.Forms.Panel panAuto;
+        private System.Windows.Forms.Button btnYear;
+        private System.Windows.Forms.Button btnDay;
+        private System.Windows.Forms.Button btnWeek;
+        private System.Windows.Forms.Button btnMonth;
     }
 }
 
