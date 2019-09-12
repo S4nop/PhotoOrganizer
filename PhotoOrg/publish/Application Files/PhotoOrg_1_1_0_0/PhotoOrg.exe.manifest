@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PhotoOrg.exe" version="1.1.0.0" publicKeyToken="b3c0082f9339de41" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="ico.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PhotoOrg" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PhotoOrg.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 매니페스트 옵션
+          Windows 사용자 계정 컨트롤 수준을 변경하려면
+          requestedExecutionLevel 노드를 다음 중 하나로 바꾸세요.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면
+         requestedExecutionLevel 노드를 삭제하세요.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PhotoOrg.exe" size="101800">
+      <assemblyIdentity name="PhotoOrg" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MXeoXB4lPwahsUJQfT6ph7383khQHULCeFMY7sqmOmc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ico.ico" size="41662">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>lgYvUSzBSfrIKXDLP7qRrDtw/SxGsOOgdoGo3HiSeSI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PhotoOrg.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=AzureAD\류성희" issuerKeyHash="a1bd79acc6047edd7ac4dae7885c00691e8f0cf5" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>KwDrFqfDJhMntun09FMoC4io6AtM1Oe+a+QDTXeqoBE=</DigestValue></Reference></SignedInfo><SignatureValue>abc8lqdbkh9iN3tvCWiR+9+S0Ek4SJ7JNItmQuGU1oWZPbi87Jf7otdRwnRgvo8kbOqtDEwl/oG5B8gzHhyrL5n/QULtBtm4Hzl+JuGzA+gbnMp7S+nojfSvbMuP5oE1MIIT2Qdo/RaucwLSd+q9PNzG/xS3/bO3XxokYV/O1uQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>3pXdnnMWEgzyby6ec9ql6dbIY7U3+udMTptMqA6DqshZv9+7JlkmnNwpsB9srdAfjZvB873yfrV9zVi+i7sOeaxkd0N5wmPM23PIpT9mgo50iL6wO4InXuNN1tRF6b1UleJHJ8V/434yXIGaRbA8ZhfEdnW9NUPMqjbknXhFqh0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="11a0aa774d03e46bbee7d44c0be8a8880b2853f4f4e9b6271326c3a716eb002b" Description="" Url=""><as:assemblyIdentity name="PhotoOrg.exe" version="1.1.0.0" publicKeyToken="b3c0082f9339de41" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AzureAD\류성희</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>w1/fTqedhPCn51hA9SAZH4xAKb6KIcpRbSF3mF/D2l8=</DigestValue></Reference></SignedInfo><SignatureValue>T5uVKI+NZcs0aKktYSxUCbM5ttyhwo7iNc54KQ1GyO+o4ITRy/k3dIU6knGIJ+HxWO1R79jlZF9O6f5oH9v4wES0qrvXfON2FVoFZntiFxs2vlfAaNnre/Xl9YSCvn/TDISA3Bu8KbiY6Uahz7HEKuCQUvHfcEQN/bdTVh1cfHc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>3pXdnnMWEgzyby6ec9ql6dbIY7U3+udMTptMqA6DqshZv9+7JlkmnNwpsB9srdAfjZvB873yfrV9zVi+i7sOeaxkd0N5wmPM23PIpT9mgo50iL6wO4InXuNN1tRF6b1UleJHJ8V/434yXIGaRbA8ZhfEdnW9NUPMqjbknXhFqh0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBxTCCAS6gAwIBAgIQOdO8oApCdY9GF+Y/MYN9ojANBgkqhkiG9w0BAQsFADAhMR8wHQYDVQQDHhYAQQB6AHUAcgBlAEEARABcuVjBMddsMB4XDTE5MDkxMjE0MTcwN1oXDTIwMDkxMTIwMTcwN1owITEfMB0GA1UEAx4WAEEAegB1AHIAZQBBAEQAXLlYwTHXbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA3pXdnnMWEgzyby6ec9ql6dbIY7U3+udMTptMqA6DqshZv9+7JlkmnNwpsB9srdAfjZvB873yfrV9zVi+i7sOeaxkd0N5wmPM23PIpT9mgo50iL6wO4InXuNN1tRF6b1UleJHJ8V/434yXIGaRbA8ZhfEdnW9NUPMqjbknXhFqh0CAwEAATANBgkqhkiG9w0BAQsFAAOBgQCLNiLiu4K+6kWa+M6/98LEBue/AtEacEzvDlDYRZn3jQcDmxdfKF4/RZT3BuXI6TQsfKoAsBvJ/B2aaYikIbmz3r7WSAtjrD+H1IW+VuBn/FxO5p9yiOTsz22r9XqieMohstzaKgENXZret4WNWTfQGbs2oHnMNXqJU0yyp7xIwg==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -10,3 +10,7 @@ C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.pd
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmPrev.resources
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmMain.resources
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.frmProg.resources
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.exe.manifest
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.application
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.exe.manifest
+C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.application
