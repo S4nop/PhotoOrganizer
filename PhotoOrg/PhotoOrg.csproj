@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>ico.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>AA6E8BCC780AAF3E96AC054BE11D67CA1EE501A6</ManifestCertificateThumbprint>
@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ico.ico" />
+    <Content Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

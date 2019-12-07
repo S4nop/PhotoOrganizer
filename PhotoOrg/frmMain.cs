@@ -116,8 +116,8 @@ namespace PhotoOrg
         private void mov2Folder(string targ, string loc)
         {
             if (Directory.Exists(loc) == false) Directory.CreateDirectory(loc);
-
-            File.Move(path + "\\" + targ, loc + "\\" + targ);
+            if (!File.Exists(loc + "\\" + targ))
+                File.Move(path + "\\" + targ, loc + "\\" + targ);
         }
 
 
