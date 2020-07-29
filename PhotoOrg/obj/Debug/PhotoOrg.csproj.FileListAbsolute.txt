@@ -14,3 +14,5 @@ C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.ex
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\bin\Debug\PhotoOrg.application
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.exe.manifest
 C:\Users\류성희\Desktop\code\PhotoOrg\PhotoOrg\PhotoOrg\obj\Debug\PhotoOrg.application
+C:\Codes\PhotoOrganizer\PhotoOrg\obj\Debug\PhotoOrg.exe
+C:\Codes\PhotoOrganizer\PhotoOrg\obj\Debug\PhotoOrg.pdb
